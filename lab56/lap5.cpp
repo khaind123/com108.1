@@ -3,7 +3,10 @@ int main(){
 	int a,b,c;
 	printf("Nhap vao diem toan:");
 	scanf("%d",&a);
-	printf("Nhap vao diem hoa:");
+	while (0<=a || a<=10){ 
+		printf("Xin moi nhap lai diem toan:");  
+		printf("Nhap vao diem hoa:");	
+}
 	scanf("%d",&b);
 	printf("Nhap vao diem ly:");
 	scanf("%d",&c);

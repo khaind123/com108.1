@@ -1,8 +1,44 @@
 #include<stdio.h>
 int main(){
-	int x;
-	for(x=1;x<101;x++){
-		printf("%d\t",x);
-	}
-	return 0;
+	int x,y,z,a,b,c,d,e,f,g;
+	for(x=1;x<=10;x++){
+		printf("%d\t",x);	
+}   
+        printf("\n");
+    for(y=11;y<=20;y++){
+		printf("%d\t",y);
+}	  
+        printf("\n");
+    for(z=21;z<=30;z++){
+		printf("%d\t",z);
+}	  
+        printf("\n");
+    for(a=31;a<=40;a++){
+		printf("%d\t",a);
+}	  
+        printf("\n");
+    for(b=41;b<=50;b++){
+		printf("%d\t",b);
+}	  
+        printf("\n");
+    for(c=51;c<=60;c++){
+		printf("%d\t",c);
+}	  
+        printf("\n");
+    for(d=61;d<=70;d++){
+		printf("%d\t",d);
+}	  
+        printf("\n");
+    for(e=71;e<=80;e++){
+		printf("%d\t",e);
+}	  
+        printf("\n");
+    for(f=81;f<=90;f++){
+		printf("%d\t",f);
+}	  
+        printf("\n");
+    for(g=91;g<=100;g++){
+		printf("%d\t",g);
+}	
+        return 0;
 }
