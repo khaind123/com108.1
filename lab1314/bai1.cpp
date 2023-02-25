@@ -32,6 +32,8 @@ int main(){
 	printf("Co %d chu t trong chuoi.",countt);
 	printf("\n");
 	
+	//
+	char str2[0]="A";
 	//Copy str1 sang str2
 	strcpy (str2,str1);
 	printf("Chuoi copy: %s\n",str1);
