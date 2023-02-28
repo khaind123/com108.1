@@ -2,122 +2,6 @@
 #include <stdio.h>
 #include <math.h>
 
-void kiemtrasonguyen(){
-	float x;
-	printf("Moi ban nhap mot so bat ky:");
-	scanf("%f",&x);
-	if(x == (int)x){
-		printf("%f la so nguyen.\n",x);
-	}
-	else 
-		printf("%f khong phai la so nguyen.\n",x);
-}
-	
-void tinhtiendien(){
-	float x;
-	printf("Moi ban nhap vao so (kWh) dien su dung:");
-	scanf("%f",&x);
-	while(x<0){
-		printf("Khong duoc nhap so nho hon 0, moi ban nhap lai:");
-		scanf("%f",&x);
-	}
-	if(x<51){
-		printf("So tien ban can phai tra la:%.2f nghin dong\n",x*1.678);
-	}
-	else if(x<101){
-		printf("So tien ban can phai tra la:%.2f nghin dong\n",x*1.734);
-	}
-	else if(x<201){
-		printf("So tien ban can phai tra la:%.2f nghin dong\n",x*2.014);
-	}
-	else if(x<301){
-		printf("So tien ban can phai tra la:%.2f nghin dong\n",x*2.536);
-	}
-	else if(x<401){
-		printf("So tien ban can phai tra la:%.2f nghin dong\n",x*2.834);
-	}
-	else {
-		printf("So tien ban can phai tra la:%.2f nghin dong\n",x*2.927);
-	}
-}
-
-void uocchungboichung(){
-	int a,b,uc,bc;
-    printf("Nhap (a,b): ");
-    scanf("%d%d",&a,&b);
-    for (uc=a;uc>=1;uc--){
-        if (a%uc==0 && b%uc==0){
-            printf("UCLN cua 2 so (%d,%d)=%d\n",a,b,uc);
-            break;
-        }
-    }
-    for (bc=a;bc<=a*b;bc++){
-        if (bc%a==0 && bc%b==0){
-            printf("BCNN cua 2 so (%d,%d)=%d\n",a,b,bc);
-            break;
-        }
-    }
-}
-
-void tinhtienkara(){
-		int a,b,c,d,tien;
-	do{
-	
-	printf("ban hay nhap gio bat dau:\n");
-	scanf("%i",&a);
-	printf("ban hay nhap gio ket thuc:\n");
-	scanf("%i",&b);
-	}while(a<=8 && b>=24);
-	c=b-a;
-	if(a>=17 && b<=24 && c<3)
-	{
-		tien=c*30000;
-		printf("so tien ban phai tra :%i\n",tien);
-	}
-	if(c<=3 && a>=8 && b<=17 )
-	{
-		tien=c*30000*90/100;
-		printf("so tien phai tra :%i\n",tien);
-	}
-	else if(c>3 && a>=8 && b<=24)
-	{
-		d=c-3;
-		tien=(d*30000*70/100*10/100)+(3*30000*10/100);
-		printf("so tien phai chi tra %i\n",tien);
-	}else if(a>=8 && b<=17 &&c<=3)
-	{
-		tien=c*30000*90/100;
-		printf("so tien phai chi tra:%i\n",tien);
-	}else if(a>=8 && b<=17 && c>3)
-	{	
-	    
-		tien=(c*30000*60/100);
-		printf("so tien phai tra tien: %i\n",tien);
-	}
-}
-
-void laisuattragop(){
-	double tienmuonvay;
-	printf("Nhap so tien muon vay:");
-	scanf("%lf",&tienmuonvay);
-	double tongtien;
-	int han=12;
-	double lai=0.05;
-	double tienlaimoithang;
-	double tiengocmoithang = tienmuonvay/han;
-	double tongtienmoithang;
-	int i;
-	for (i=1;i<han;i++){
-		tienlaimoithang = tienmuonvay * lai;
-		tongtienmoithang = tienlaimoithang + tiengocmoithang;
-		tongtien += tongtienmoithang;
-		tienmuonvay = tienmuonvay - tiengocmoithang;
-		printf("So tien can tra trong thang %d:",i);
-		printf("lai%.0lf\tgoc%.0lf\tphai tra%.0lf\tcon%.0lf\n",tienlaimoithang,tiengocmoithang,tongtienmoithang,tienmuonvay);
-	}
-	printf("Tong tien phai tra sau 12 thang la:%.2lf vnd\n",tongtien);
-}
-
 void menu(){
 	int luachon;
 	printf("-------MENU------\n");
@@ -137,22 +21,22 @@ void menu(){
 	printf("-----------------\n");
 	switch(luachon){
 		case 1:
-			kiemtrasonguyen();
+			printf("So da nhap khong phai so nguyen.\n");
 			break;
 		case 2:
-			uocchungboichung();
+			printf("Uoc so chung lon nhat:\n");
 			break;
 		case 3:
-			tinhtienkara();
+			printf("So tien phai tra:\n");
 			break;
 		case 4:
-			uocchungboichung();
+			printf("So tien phai tra:\n");
 			break;
 		case 5:
 			printf("So tien da duoc doi thanh:\n");
 			break;
 		case 6:
-			laisuattragop();
+			printf("So tien phai tra trong 12 thang:\n");
 			break;
 		case 7:
 			printf("So tien phai tra lan dau:\n");
