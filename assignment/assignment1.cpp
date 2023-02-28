@@ -96,39 +96,28 @@ void tinhtienkara(){
 	}
 }
 
-void sapxepthongtin(){
-	struct Sinhvien{
-		char Hoten[50];
-		float Dtb;
-	};	
-	int main(){
-		struct Sinhvien dssv[5];
-		int i;
-		for(i=0;i<5;i++){
-		printf("Nhap ho ten sinh vien %s:",i+1);
-		gets(dssv[i].Hoten);
-		printf("Nhap diem sinh vien %d:",i+1);
-		scanf("%f",dssv[i].Dtb);
-		getchar();
+void laisuattragop(){
+	double tienmuonvay;
+	printf("Nhap so tien muon vay:");
+	scanf("%lf",&tienmuonvay);
+	double tongtien;
+	int han=12;
+	double lai=0.05;
+	double tienlaimoithang;
+	double tiengocmoithang = tienmuonvay/han;
+	double tongtienmoithang;
+	int i;
+	for (i=1;i<han;i++){
+		tienlaimoithang = tienmuonvay * lai;
+		tongtienmoithang = tienlaimoithang + tiengocmoithang;
+		tongtien += tongtienmoithang;
+		tienmuonvay = tienmuonvay - tiengocmoithang;
+		printf("So tien can tra trong thang %d:",i);
+		printf("lai%.0lf\tgoc%.0lf\tphai tra%.0lf\tcon%.0lf\n",tienlaimoithang,tiengocmoithang,tongtienmoithang,tienmuonvay);
 	}
-	printf("Danh sach sinh vien!\n");
-	for(i=0;i<5;i++){
-		printf("Ho ten:%s\n",dssv[i].Hoten);
-		printf("Diem trung binh:%.1f\n",dssv[i].Dtb);
-		if(dssv[i].Dtb>=9){
-			printf("Hoc luc: Xuat sac\n");}
-		else if(dssv[i].Dtb>=8){
-			printf("Hoc luc: Gioi\n");}
-		else if(dssv[i].Dtb>=6.5){
-			printf("Hoc luc: Kha\n");}
-		else if(dssv[i].Dtb>=5){
-			printf("Hoc luc: Trung binh\n");}
-		else {
-			printf("Hoc luc: Yeu\n");}
-	}
+	printf("Tong tien phai tra sau 12 thang la:%.2lf vnd\n",tongtien);
 }
-}
-}
+
 void menu(){
 	int luachon;
 	printf("-------MENU------\n");
@@ -163,14 +152,14 @@ void menu(){
 			printf("So tien da duoc doi thanh:\n");
 			break;
 		case 6:
-			printf("So tien can tra trong 12 thang:\n");
+			laisuattragop();
 			break;
 		case 7:
 			printf("So tien phai tra lan dau:\n");
 			printf("So tien phai tra hang thang:\n");
 			break;
 		case 8:
-			sapxepthongtin();
+			printf("Thong tin cua ban:\n");
 			break;
 		case 9:
 			printf("Chuc ban may man lan sau.\n");
