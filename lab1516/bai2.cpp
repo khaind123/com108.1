@@ -26,7 +26,8 @@ int main(){
 	printf("Nhap ho sv1:");
 	scanf("%s",&sv1.ho);
 	printf("Nhap ten sv1:");
-	scanf("%s",&sv1.ten);
+	getchar();
+	gets(sv1.ten);
 	printf("Nhap ngay sinh sv1:");
 	scanf("%d",&sv1.ngaysinh.ngay);
 	printf("Nhap thang sinh sv1:");
@@ -48,7 +49,8 @@ int main(){
 	printf("Nhap ho sv2:");
 	scanf("%s",&sv2.ho);
 	printf("Nhap ten sv2:");
-	scanf("%s",&sv2.ten);
+	getchar();
+	gets(sv2.ten);
 	printf("Nhap ngay sinh sv2:");
 	scanf("%d",&sv2.ngaysinh.ngay);
 	printf("Nhap thang sinh sv2:");
@@ -70,7 +72,8 @@ int main(){
 	printf("Nhap ho sv3:");
 	scanf("%s",&sv3.ho);
 	printf("Nhap ten sv3:");
-	scanf("%s",&sv3.ten);
+	getchar();
+	gets(sv3.ten);
 	printf("Nhap ngay sinh sv3:");
 	scanf("%d",&sv3.ngaysinh.ngay);
 	printf("Nhap thang sinh sv3:");
@@ -92,7 +95,8 @@ int main(){
 	printf("Nhap ho sv4:");
 	scanf("%s",&sv4.ho);
 	printf("Nhap ten sv4:");
-	scanf("%s",&sv4.ten);
+	getchar();
+	gets(sv4.ten);
 	printf("Nhap ngay sinh sv4:");
 	scanf("%d",&sv4.ngaysinh.ngay);
 	printf("Nhap thang sinh sv4:");
@@ -114,7 +118,8 @@ int main(){
 	printf("Nhap ho sv5:");
 	scanf("%s",&sv5.ho);
 	printf("Nhap ten sv5:");
-	scanf("%s",&sv5.ten);
+	getchar();
+	gets(sv5.ten);
 	printf("Nhap ngay sinh sv5:");
 	scanf("%d",&sv5.ngaysinh.ngay);
 	printf("Nhap thang sinh sv5:");
